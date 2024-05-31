@@ -1,0 +1,49 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: green;
+    padding: 20px;
+    color: white;
+  }
+  
+  .container {
+    margin: 20px;
+  }
+  
+  .container1 {
+    margin: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: greenyellow;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    border-radius: 4px;
+  }

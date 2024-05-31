@@ -1,0 +1,49 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
+import { auth } from "./firebase";
+import "./Signup.css"
+
+function Signup() {
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function signUpUser(e) {
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                navigate("/login");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.error(errorCode, errorMessage);
+            });
+    }
+
+    return (
+        <div className="contain">
+            <form>
+                <h1>cSign up</h1>
+                <label htmlFor="email">Email: </label>
+                <input value={email}
+                    type="email" id="email" name="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <label htmlFor="password">Password: </label>
+                <input value={password}
+                    type="password" id="password" name="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="button" type="submit" onClick={signUpUser}>
+                    Sign up
+                </button>
+            </form>
+        </div>
+    );
+}
+
+export default Signup;
