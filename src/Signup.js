@@ -16,33 +16,30 @@ function Signup() {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 navigate("/login");
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                console.error(errorCode, errorMessage);
             });
     }
 
     return (
-        <div className="contain">
-            <form>
-                <h1>cSign up</h1>
-                <label htmlFor="email">Email: </label>
-                <input value={email}
-                    type="email" id="email" name="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <label htmlFor="password">Password: </label>
-                <input value={password}
-                    type="password" id="password" name="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button className="button" type="submit" onClick={signUpUser}>
-                    Sign up
-                </button>
-            </form>
-        </div>
+        <div>
+            <div className="contain">
+                <form>
+                    <h1>Sign up for the Pantry!</h1>
+                    <label htmlFor="email">Email: </label>
+                    <input value={email}
+                        type="email" id="email" name="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <label htmlFor="password">Password: </label>
+                    <input value={password}
+                        type="password" id="password" name="password"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button className="button" type="submit" onClick={signUpUser}>
+                        Sign up
+                    </button>
+                </form>
+            </div>
+    </div>
     );
 }
 

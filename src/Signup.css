@@ -8,24 +8,17 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 20em;
     margin: 2em;
     gap: 1em;
-    border-color: black;
-    border: solid;
-    border-right-width: 2px;
-    border-left-width: 2px;
-    border-top-width: 2px;
-    border-bottom-width: 2px;
     height: 40vh;
-    width: 400px;
-    box-sizing: border-box;
+    width: 50vw;
     padding:20px;
     align-content: center;
+    color: rgb(62, 104, 62);
 }
 
 .button {
-    background-color:rgba(232, 230, 230, 0.927);
+    background-color:rgb(62, 104, 62);
     height: 20px;
     padding: 0;
     width: 100%;
@@ -33,4 +26,11 @@ form {
     border-left-width: 1px;
     border-top-width: 1px;
     border-bottom-width: 1px;
+}
+
+@media(max-width:900px) {
+    .form {
+        height: 70vh;
+        width: 75vw;
+    }
 }

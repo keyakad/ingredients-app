@@ -25,24 +25,27 @@ function Login() {
     }
 
     return (
-        <div className="container">
-            <form>
-                <h1>Log in</h1>
-                <label htmlFor="email">Email: </label>
-                <input value={email}
-                    type="email" id="email" name="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <label htmlFor="password">Password: </label>
-                <input value={password}
-                    type="password" id="password" name="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button className="button" type="submit" onClick={loginUser}>
-                    Log in
-                </button>
-                <p>New user? Sign up <Link to="/signup">here</Link></p>
-            </form>
+        <div>
+            <div className="container">
+                <form>
+                    <h1>Welcome to the Pantry</h1>
+                    <h2>Log in</h2>
+                    <label htmlFor="email">Email: </label>
+                    <input value={email}
+                        type="email" id="email" name="email"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <label htmlFor="password">Password: </label>
+                    <input value={password}
+                        type="password" id="password" name="password"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <button className="button" type="submit" onClick={loginUser}>
+                                Log in
+                    </button>
+                    <p>New user? Sign up <Link to="/signup">here</Link></p>
+                 </form>
+            </div>
         </div>
     );
 }
